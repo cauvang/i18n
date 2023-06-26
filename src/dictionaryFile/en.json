@@ -1,0 +1,8 @@
+{
+  "home": {
+    "title": "Introduce about Vietnam",
+    "listing1": "food",
+    "listing2": "places"
+  },
+  "food": { "title": "Food in Vietnam" }
+}

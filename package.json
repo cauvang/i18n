@@ -6,7 +6,10 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "prepare": "husky install",
+    "lint": "next lint && yarn prettier:lint && tsc --noEmit",
+    "prettier": "prettier --config .prettierrc --write './src/**/*.(ts|tsx|json|css)' './src/**/**/*.(ts|tsx|json|css)'",
+    "prettier:lint": "prettier --config .prettierrc --check './src/**/*.(ts|tsx|json|css)' './src/**/**/*.(ts|tsx|json|css)'"
   },
   "dependencies": {
     "@types/node": "20.3.1",
@@ -15,10 +18,13 @@
     "autoprefixer": "10.4.14",
     "eslint": "8.43.0",
     "eslint-config-next": "13.4.7",
+    "husky": "^8.0.3",
     "next": "13.4.7",
     "postcss": "8.4.24",
+    "prettier": "^2.8.8",
     "react": "18.2.0",
     "react-dom": "18.2.0",
+    "react-query": "^3.39.3",
     "tailwindcss": "3.3.2",
     "typescript": "5.1.3"
   }
