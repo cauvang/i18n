@@ -1,1 +1,15 @@
-{ "title": "Introduce about Vietnam", "listing1": "food", "listing2": "places" }
+{
+  "title": "Introduce about Vietnam",
+  "listing1": "Food",
+  "listing2": "Places",
+  "location": "Located on the eastern Indochinese Peninsula",
+  "area": "Surface area: 331,000km2",
+  "population": "Population: 99.5 millions",
+  "weather": "Weather",
+  "weatherNorth": "Northern Vietnam and Hanoi",
+  "weatherNorth1": "September - March: cool to cold: around 25 degrees",
+  "weatherNorth2": "April - August: above 30 degrees",
+  "weatherSouth": "Southern Vietnam and Ho Chi Minh City: around 30 degrees year-round",
+  "weatherSouth1": "December - March: hot and dry",
+  "weatherSouth2": "April - November: hot and rainy"
+}

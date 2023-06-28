@@ -1,5 +1,15 @@
 {
   "title": "Présentation du Vietnam",
   "listing1": "Nourriture",
-  "listing2": "Lieux"
+  "listing2": "Lieux",
+  "location": "Situé à l'est de la péninsule indochinoise",
+  "area": "Superficie : 331.000km2",
+  "population": "Population : 99,5 millions",
+  "weather": "Temps",
+  "weatherNorth": "Nord du Vietnam et Hanoï",
+  "weatherNorth1": "Septembre - mars : frais à froid : autour de 25 degrés",
+  "weatherNorth2": "Avril - août : au-dessus de 30 degrés",
+  "weatherSouth": "Sud du Vietnam et Ho Chi Minh Ville : environ 30 degrés toute l'année",
+  "weatherSouth1": "Décembre - Mars : chaud et sec",
+  "weatherSouth2": "Avril - novembre : chaud et pluvieux"
 }

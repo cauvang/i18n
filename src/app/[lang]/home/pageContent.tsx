@@ -1,31 +1,34 @@
 'use client'
 
-import { useRootPathname } from '@/hook/usePath'
-import { useTranslationFolder } from '@/hook/useStaticContent'
-import Link from 'next/link'
+import DynamicContent from '@/components/dynamicContent'
+import StaticContent from '@/components/staticContent'
+import { useState } from 'react'
 
 export default function HomePage() {
-  const { translation: tl } = useTranslationFolder('home')
-  const { rootPath } = useRootPathname()
+  const [contentType, setContentType] = useState('static')
+  const activeButton = (isActive: boolean) =>
+    isActive
+      ? 'bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 border border-blue-700 rounded'
+      : 'bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 border border-green-700 rounded'
 
   return (
-    <main className='flex min-h-screen  p-24'>
-      <h1>{tl.title}</h1>
+    <main className='p-7'>
+      <button
+        className={activeButton(contentType === 'static')}
+        onClick={() => setContentType('static')}
+      >
+        Static Content
+      </button>
+      <button
+        className={activeButton(contentType === 'dynamic')}
+        onClick={() => setContentType('dynamic')}
+      >
+        Dynamic Content
+      </button>
 
-      <nav className=''>
-        <ul className='text-xl flex flex-col content-center md:flex-row'>
-          <li className='md:mr-10 text-center mb-12 md:mb-0'>
-            <Link href={`${rootPath}/food`} locale={false}>
-              {tl.listing1}
-            </Link>
-          </li>
-          <li className='text-center'>
-            <Link href={`${rootPath}/places`} locale={false}>
-              {tl.listing2}
-            </Link>
-          </li>
-        </ul>
-      </nav>
+      {contentType === 'dynamic' && <DynamicContent />}
+
+      {contentType === 'static' && <StaticContent />}
     </main>
   )
 }

@@ -1,29 +1,12 @@
+'use client'
 import { i18n } from '@/i18n-config'
 import './globals.css'
 import { Inter } from 'next/font/google'
+import { QueryClient, QueryClientProvider } from 'react-query'
 
 const inter = Inter({ subsets: ['latin'] })
 
-export const metadata = {
-  applicationName: 'Internationalization Example',
-  title: {
-    default: 'Internationalization With static page',
-    template: '%s - PWA App',
-  },
-
-  manifest: '/manifest.json',
-  appleWebApp: {
-    capable: true,
-    statusBarStyle: 'default',
-  },
-  formatDetection: {
-    telephone: false,
-  },
-  icons: {
-    shortcut: '/favicon.ico',
-    apple: [{ url: '/icons/apple-touch-icon.png', sizes: '180x180' }],
-  },
-}
+const queryClient = new QueryClient()
 
 export async function generateStaticParams() {
   return i18n.locales.map((locale) => ({ lang: locale }))
@@ -38,9 +21,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang={params.lang}>
-      <head />
       <body className={inter.className}>
-        <main>{children}</main>
+        <main>
+          <QueryClientProvider client={queryClient}>
+            {children}
+          </QueryClientProvider>
+        </main>
       </body>
     </html>
   )

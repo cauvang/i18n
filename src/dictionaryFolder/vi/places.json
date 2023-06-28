@@ -1,1 +1,18 @@
-{ "title": "Địa điểm ở Việt Nam" }
+{
+  "title": "Địa điểm ở Việt Nam",
+  "north": "Northern Places",
+  "south": "Southern Places",
+  "central": "Central Places",
+  "northPlace1": "Hà Nội",
+  "northPlace1Explain": "Là thủ đô của quốc gia, Hà Nội là sự pha trộn thú vị của văn hóa phương Đông và phương Tây. Hà Nội có rất nhiều ngôi chùa đáng kinh ngạc, và một chuyến viếng thăm Văn Miếu thế kỷ 11 là một hoạt động không thể bỏ qua. Bảo tàng Hồ Chí Minh và Lăng nằm cạnh nhau cũng là những điểm thu hút chính ở Hà Nội và cả hai đều là những tòa nhà nổi bật từ bên ngoài.",
+  "northPlace2": "Vịnh Hạ Long",
+  "northPlace2Explain": "Hạ Long có nghĩa là rồng đáp xuống, là hình bóng của những mỏm đá vôi nhô ra khỏi mặt nước. Các chuyến du ngoạn trong ngày hoặc các chuyến đi thuyền qua đêm là một cách ngoạn mục để trải nghiệm vẻ đẹp của Vịnh Hạ Long và ngắm nhìn càng nhiều hòn đảo càng tốt",
+  "northPlace3": "Sapa",
+  "northPlace3Explain": "Thị trấn miền núi Sapa được biết đến với dân số đa dạng về văn hóa cũng như sự gần gũi với phong cảnh tuyệt vời. Bản thân Sapa là nơi sinh sống của các thành viên của nhiều bộ lạc trên đồi, bao gồm người Hmong, người Dao, người Mường và người Tày. Thị trấn cũng nhìn ra Thung lũng Mường Hoa tráng lệ và những cánh đồng lúa bậc thang đẹp đến kinh ngạc.",
+  "northPlace4": "Tam Cốc",
+  "northPlace4Explain": "Trên giấy tờ, Tam Cốc có thể được mô tả như những cánh đồng lúa được bao quanh bởi những vách đá vôi và đá. Trên thực tế, Tam Cốc là một trong những điểm đến đẹp ngoạn mục nhất trong toàn khu vực. Cách tốt nhất để khám phá là đi thuyền, và bạn có thể bắt đầu chèo thuyền đưa bạn dọc theo những cánh đồng xanh mướt và giữa những vách đá vôi nổi bật. Bạn thậm chí sẽ trôi nổi qua ba đường hầm chạy xuyên qua những ngọn núi, được tạo ra theo thời gian bởi chính dòng sông. Từ thuyền của bạn, những người bán hàng rong có thể cám dỗ (hoặc ngăn cản) bạn bằng những món quà lưu niệm và đồ thủ công mỹ nghệ địa phương.",
+  "northPlace5": "Đảo Cát Bà",
+  "northPlace5nExplain": "Ở Vịnh Hạ Long của Việt Nam là Quần đảo Cát Bà. Trong khi quần đảo tự hào có hơn 360 hòn đảo, hòn đảo lớn nhất có tên là Cát Bà. Mặc dù có rất nhiều địa điểm đẹp để khám phá trên đảo, nhưng thị trấn Cát Bà không nằm trong số này, với những khách sạn bê tông thấp tầng dọc theo một vịnh xinh đẹp một thời. May mắn thay, hơn 50% diện tích của hòn đảo là công viên quốc gia, được thành lập để bảo vệ Voọc Cát Bà quý hiếm, một loài linh trưởng đáng yêu nhưng khó phát hiện. Nếu bạn không thể phát hiện ra bất kỳ con voọc nào, hãy đi phà qua Đảo Khỉ. Ở đó, khỉ rất nhiều.",
+  "northPlace6": "Vịnh Bái Tử Long",
+  "northPlace6Explain": "Vịnh Bái Tử Long tiếp giáp với Hạ Long, và nó cũng tự hào có một cao nguyên đá vôi chìm, làn nước trong xanh tuyệt đẹp và vô số hòn đảo nhỏ. Trên thực tế, nhiều người thích Vịnh Bái Tử Long vì nó ít đông đúc hơn nhiều so với người hàng xóm nổi tiếng hơn ở phía nam. Cách tốt nhất để tham quan Vịnh Bái Tử Long là đi thuyền, và có rất nhiều chuyến du thuyền có thể đưa bạn đến những điểm nổi bật trên khắp vịnh."
+}

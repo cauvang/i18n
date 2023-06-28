@@ -1,1 +1,18 @@
-{ "title": "Lieux au Vietnam" }
+{
+  "title": "Lieux au Vietnam",
+  "north": "Northern Places",
+  "south": "Southern Places",
+  "central": "Central Places",
+  "northPlace1": "Hanoi",
+  "northPlace1Explain": "En tant que capitale nationale, Hanoi est un mélange exaltant de culture orientale et occidentale. Hanoi regorge de temples incroyables et une visite au temple de la littérature du XIe siècle est une activité incontournable. Le musée et le mausolée Ho Chi Minh côte à côte sont également des attractions majeures à Hanoi, et les deux sont des bâtiments frappants de l'extérieur.",
+  "northPlace2": "Baie d'Halong",
+  "northPlace2Explain": "Halong signifie dragons descendants, ce qui indique la silhouette des affleurements calcaires qui sortent de l'eau. Les croisières d'une journée ou les excursions en bateau de nuit sont un moyen spectaculaire de découvrir la beauté de la baie d'Halong et de voir autant d'îles que possible.",
+  "northPlace3": "Sapa",
+  "northPlace3Explain": "La ville montagneuse de Sapa est connue pour sa population culturellement diversifiée ainsi que sa proximité avec des paysages incroyables. Sapa elle-même abrite les membres de nombreuses tribus montagnardes, notamment les Hmong, les Dao, les Muong et les Tay. La ville surplombe également la magnifique vallée de Muong Hoa et ses rizières en terrasses, qui sont stupéfiantes à voir.",
+  "northPlace4": "Tam Coc",
+  "northPlace4Explain": "Sur le papier, Tam Coc peut être décrit comme des rizières entourées de falaises calcaires et de formations rocheuses. En réalité, Tam Coc est l'une des destinations les plus époustouflantes de toute la région. La meilleure façon d'explorer est en bateau, et vous pouvez partir sur une chaloupe qui vous emmène le long des rizières verdoyantes et entre les falaises calcaires saisissantes. Vous flotterez même à travers trois tunnels qui traversent les montagnes, qui ont été creusés au fil du temps par la rivière elle-même. Depuis votre bateau, les vendeurs peuvent vous tenter (ou vous dissuader) avec des souvenirs locaux et de l'artisanat.",
+  "northPlace5": "Île de Cat Ba",
+  "northPlace5nExplain": "Dans la baie d'Halong au Vietnam se trouve l'archipel de Cat Ba. Alors que l'archipel compte plus de 360 îles, la plus grande s'appelle Cat Ba. Bien qu'il existe de nombreux endroits magnifiques à explorer sur l'île, la ville de Cat Ba n'en fait pas partie, avec ses hôtels en béton peu élevés le long d'une baie autrefois ravissante. Heureusement, plus de 50% de l'île est un parc national, qui a été créé pour protéger le rare Cat Ba Langur, un primate adorable mais difficile à repérer. Si vous ne parvenez pas à repérer de langurs, prenez un ferry pour Monkey Island. Là-bas, les macaques sont en abondance.",
+  "northPlace6": "Baie de Bai Tu Long",
+  "northPlace6Explain": "La baie de Bai Tu Long est adjacente à Halong et possède également un plateau calcaire en train de couler, de magnifiques eaux bleues et une abondance de petites îles. En fait, beaucoup de gens préfèrent la baie de Bai Tu Long car elle est beaucoup moins fréquentée que sa voisine plus populaire au sud. La meilleure façon de visiter la baie de Bai Tu Long est en bateau, et il existe un certain nombre de croisières qui peuvent vous emmener vers les points forts de la baie."
+}
