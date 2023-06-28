@@ -8,23 +8,29 @@ export default function HomePage() {
   const [contentType, setContentType] = useState('static')
   const activeButton = (isActive: boolean) =>
     isActive
-      ? 'bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 border border-blue-700 rounded'
-      : 'bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 border border-green-700 rounded'
+      ? 'bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 border border-blue-700'
+      : ' hover:bg-offWhite text-grey font-bold py-2 px-4  '
 
   return (
     <main className='p-7'>
-      <button
-        className={activeButton(contentType === 'static')}
-        onClick={() => setContentType('static')}
-      >
-        Static Content
-      </button>
-      <button
-        className={activeButton(contentType === 'dynamic')}
-        onClick={() => setContentType('dynamic')}
-      >
-        Dynamic Content
-      </button>
+      <span className='bg-white shadow-btn-white p-0.5 inline-flex cursor-pointer rounded-full'>
+        <button
+          className={`rounded-full py-2 px-8 gap-2.5 ${activeButton(
+            contentType === 'static'
+          )}`}
+          onClick={() => setContentType('static')}
+        >
+          Static Content
+        </button>
+        <button
+          className={`rounded-full py-2 px-8 gap-2.5 ${activeButton(
+            contentType === 'dynamic'
+          )}`}
+          onClick={() => setContentType('dynamic')}
+        >
+          Dynamic Content
+        </button>
+      </span>
 
       {contentType === 'dynamic' && <DynamicContent />}
 

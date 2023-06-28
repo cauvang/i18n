@@ -1,27 +1,22 @@
 import { getDictionaryFile } from '@/dictionaryFile/dictionaryFile'
 import HomePage from './home/pageContent'
-
-import { Metadata, ResolvingMetadata } from 'next'
+import { Metadata } from 'next'
 import { Locale } from '@/i18n-config'
 
-// type Props = {
-//   params: { lang: string }
-// }
+export interface Props {
+  params: { lang: string }
+}
 
-// // set dynamic metadata
-// export async function generateMetadata({ params }: Props): Promise<Metadata> {
-//   const dict: any = await getDictionaryFile(params.lang as Locale)
+// set dynamic metadata
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const lang = params.lang
+  const dict: any = await getDictionaryFile(lang as Locale)
+  return {
+    title: dict.home.title,
+    description: dict.home.title,
+  }
+}
 
-//   return {
-//     title: dict.home.title,
-//     description: dict.home.title,
-//   }
-// }
-
-// export default function Home({ params }: Props) {
-//   return <HomePage />
-// }
-
-export default function Home() {
+export default function Home({ params }: Props) {
   return <HomePage />
 }

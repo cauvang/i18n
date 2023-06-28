@@ -62,6 +62,9 @@ module.exports = {
       textShadow: {
         DEFAULT: '1px 1px 4px rgba(0, 0, 0, 0.2)',
       },
+      boxShadow: {
+        'btn-white': '1px 1px 5px rgba(100, 100, 100, 0.05)',
+      },
     },
   },
   variants: {
