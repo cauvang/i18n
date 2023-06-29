@@ -12,6 +12,7 @@
     "prettier:lint": "prettier --config .prettierrc --check './src/**/*.(ts|tsx|json|css)' './src/**/**/*.(ts|tsx|json|css)'"
   },
   "dependencies": {
+    "@headlessui/react": "^1.7.15",
     "@types/node": "20.3.1",
     "@types/react": "18.2.13",
     "@types/react-dom": "18.2.6",
@@ -19,6 +20,7 @@
     "eslint": "8.43.0",
     "eslint-config-next": "13.4.7",
     "husky": "^8.0.3",
+    "lottie-react": "^2.4.0",
     "next": "13.4.7",
     "next-pwa": "^5.6.0",
     "postcss": "8.4.24",

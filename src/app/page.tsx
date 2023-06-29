@@ -2,10 +2,10 @@ import HomePage from './[lang]/home/pageContent'
 
 export const metadata = {
   applicationName: 'Internationalization Example',
-  // title: {
-  //   default: 'Internationalization With static page',
-  //   template: '%s - PWA App',
-  // },
+  title: {
+    default: 'Home page', //should change to title of default language
+    template: '%s - PWA App',
+  },
 
   manifest: '/manifest.json',
   appleWebApp: {

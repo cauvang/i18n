@@ -1,12 +1,9 @@
 // Next.js API route support: https://nextjs.org/docs/api-routes/introduction
 import { Props } from '@/app/[lang]/page'
 import { getDictionaryFile } from '@/dictionaryFile/dictionaryFile'
-import { Locale } from '@/i18n-config'
 import { NextResponse } from 'next/server'
 
 export async function GET(request: Request, { params }: Props) {
-  const lang = params.lang
-
-  const dict: any = await getDictionaryFile(lang as Locale)
+  const dict: any = await getDictionaryFile(params.lang)
   return NextResponse.json(dict)
 }

@@ -6,5 +6,10 @@ const dictionaries = {
   vi: () => import('./vi.json').then((module) => module.default),
 }
 
-export const getDictionaryFile = async (locale: Locale) =>
-  dictionaries[locale || i18n.defaultLocale]()
+export const getDictionaryFile = async (locale: string) => {
+  try {
+    return dictionaries[(locale as Locale) || i18n.defaultLocale]()
+  } catch (error) {
+    return null
+  }
+}
