@@ -12,9 +12,7 @@ export const metadata = {
     capable: true,
     statusBarStyle: 'default',
   },
-  formatDetection: {
-    telephone: false,
-  },
+
   icons: {
     shortcut: '/favicon.ico',
     apple: [{ url: '/icons/apple-touch-icon.png', sizes: '180x180' }],

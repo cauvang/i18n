@@ -10,7 +10,13 @@ export default function SampleContent({ tl }: { tl: any }) {
     <>
       <p className='text-7xl text-primary text-center p-4'>{tl.title}</p>
       <div className='flex flex-row mt-8'>
-        <Image src='/images/vietnam-map.jpg' alt='' width={800} height={800} />
+        <Image
+          src='/images/vietnam-map.jpg'
+          alt=''
+          width={800}
+          height={800}
+          priority
+        />
         <ul>
           <li>{tl.location}</li>
           <li>{tl.area}</li>
