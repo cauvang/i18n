@@ -8,25 +8,15 @@ const withPWA = require('next-pwa')({
   exclude: [/swagger-ui/],
 })
 
-// const nextConfig = withPWA({
-//   experimental: {
-//     appDir: true,
-//   },
-//   // basePath: '/i18n',
-//   reactStrictMode: true,
-//   output: 'export',
-//   trailingSlash: false,
-//   images: { unoptimized: true },
-// })
-const nextConfig = {
+const nextConfig = withPWA({
   experimental: {
     appDir: true,
   },
-  basePath: '/i18n',
+  // basePath: '/i18n',
   reactStrictMode: true,
   output: 'export',
   trailingSlash: false,
   images: { unoptimized: true },
-}
+})
 
 module.exports = nextConfig
