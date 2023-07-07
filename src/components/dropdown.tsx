@@ -17,7 +17,7 @@ export default function DropDownList() {
       <div>
         <Menu.Button className='py-2 px-4 gap-2.5 font-bold inline-flex w-full justify-center rounded-md bg-white  text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50'>
           Languages
-          <Image alt='' src='/images/down.png' width={32} height={32} />
+          <Image alt='' src='images/down.png' width={32} height={32} />
         </Menu.Button>
       </div>
 

@@ -14,7 +14,7 @@ export const FoodDetail = ({ imageSrc, name, detail }: IDetailProps) => (
   <span>
     <p className='text-4xl text-secondaryUK  h-24'> ▪ {name}</p>
     <div className='relative w-ful h-96 my-4'>
-      <Image src={`/images/food/${imageSrc}.jpeg`} alt='' fill />
+      <Image src={`images/food/${imageSrc}.jpeg`} alt='' fill />
     </div>
     {detail}
   </span>
