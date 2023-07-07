@@ -15,7 +15,9 @@ export default function HomePage() {
       : ' hover:bg-offWhite text-grey'
 
   const { pathName, isHavingLocale } = useRootPathname()
-  if (!isHavingLocale && pathName != '/') return notFound()
+  if (process.env.NODE_ENV === 'development') {
+    if (!isHavingLocale && pathName != '/') return notFound()
+  }
 
   return (
     <main className='p-7'>
