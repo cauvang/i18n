@@ -1,8 +1,11 @@
 {
   "name": "i18n-next13app",
   "version": "0.1.0",
+  "homepage": "https://cauvang.github.io/i18n",
   "private": true,
   "scripts": {
+    "predeploy": "yarn build",
+    "deploy": "gh-pages -d out",
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
@@ -19,6 +22,7 @@
     "autoprefixer": "10.4.14",
     "eslint": "8.43.0",
     "eslint-config-next": "13.4.7",
+    "gh-pages": "^5.0.0",
     "husky": "^8.0.3",
     "lottie-react": "^2.4.0",
     "next": "13.4.7",
