@@ -8,7 +8,7 @@ export const PlaceDetail = ({ imageSrc, name, detail }: IDetailProps) => (
   <span>
     <p className='text-4xl text-secondaryUK'> ▪ {name}</p>
     <div className='relative w-full h-96 my-4'>
-      <Image src={`/images/places/${imageSrc}.jpeg`} alt='' fill priority />
+      <Image src={`images/places/${imageSrc}.jpeg`} alt='' fill priority />
     </div>
     {detail}
   </span>

@@ -12,8 +12,8 @@ const nextConfig = withPWA({
   experimental: {
     appDir: true,
   },
-  basePath: process.env.NODE_ENV === 'development' ? '' : '/i18n',
-  assetPrefix: process.env.NODE_ENV === 'development' ? '' : '/i18n',
+  basePath: process.env.NODE_ENV === 'development' ? './' : '/i18n',
+  assetPrefix: process.env.NODE_ENV === 'development' ? '/' : '/i18n',
   reactStrictMode: true,
   output: 'export',
   trailingSlash: false,
