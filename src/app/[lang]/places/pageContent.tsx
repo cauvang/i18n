@@ -13,7 +13,7 @@ export default function PlacesContent() {
     <div className='p-7'>
       <p className='text-7xl text-primary text-center p-4'>{tl.title}</p>
       <div className='grid grid-cols-2'>
-        <Image src='images/location.avif' alt='' width={500} height={500} />
+        <Image src='/images/location.avif' alt='' width={500} height={500} />
         <div className='flex flex-col text-success mt-24'>
           <Link href={`${rootPath}/places/north`} locale={false}>
             ▪ {tl.north}
