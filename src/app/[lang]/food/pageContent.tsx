@@ -24,7 +24,7 @@ const BeverageDetail = ({ imageSrc, name, detail }: IDetailProps) => (
     <p className='text-4xl text-secondaryUK  h-24'> ▪ {name}</p>
     <Image
       className='my-4'
-      src={`/images/food/${imageSrc}.jpeg`}
+      src={`images/food/${imageSrc}.jpeg`}
       alt=''
       width={400}
       height={400}
