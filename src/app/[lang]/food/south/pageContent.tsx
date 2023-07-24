@@ -2,6 +2,7 @@
 
 import { useTranslationFolder } from '@/hook/useStaticContent'
 import { FoodDetail } from '../pageContent'
+import { FoodNavigation, HomeNavigation } from '@/components'
 
 export default function SouthernFoodContent() {
   const { translation: tl } = useTranslationFolder('food')
@@ -22,6 +23,11 @@ export default function SouthernFoodContent() {
             detail={tl[detail]}
           />
         ))}
+      </div>
+      <div className='mt-24 flex items-center justify-between'>
+        <FoodNavigation />
+
+        <HomeNavigation />
       </div>
     </div>
   )

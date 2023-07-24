@@ -1,8 +1,6 @@
 'use client'
 
-import DropDownList from '@/components/dropdown'
-import DynamicContent from '@/components/dynamicContent'
-import StaticContent from '@/components/staticContent'
+import { DropDownList, StaticContent, DynamicContent } from '@/components'
 import { useRootPathname } from '@/hook/usePath'
 import { notFound } from 'next/navigation'
 import { useState } from 'react'

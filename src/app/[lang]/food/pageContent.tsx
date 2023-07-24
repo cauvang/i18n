@@ -1,19 +1,25 @@
 'use client'
 
-import { useRootPathname } from '@/hook/usePath'
+import { FoodNavigation, HomeNavigation } from '@/components'
 import { useTranslationFolder } from '@/hook/useStaticContent'
 import Image from 'next/image'
-import Link from 'next/link'
 
 export interface IDetailProps {
   imageSrc: string
   name: string
   detail: string
+  link?: string
+  className?: string
 }
-export const FoodDetail = ({ imageSrc, name, detail }: IDetailProps) => (
+export const FoodDetail = ({
+  imageSrc,
+  name,
+  detail,
+  className,
+}: IDetailProps) => (
   <span>
-    <p className='text-4xl text-secondaryUK  h-24'> ▪ {name}</p>
-    <div className='relative w-ful h-96 my-4'>
+    <p className={`text-4xl text-secondaryUK h-24 ${className}`}> ▪ {name}</p>
+    <div className='relative w-full h-96 my-4'>
       <Image src={`/images/food/${imageSrc}.jpeg`} alt='' fill />
     </div>
     {detail}
@@ -35,7 +41,6 @@ const BeverageDetail = ({ imageSrc, name, detail }: IDetailProps) => (
 
 export default function FoodContent() {
   const { translation: tl } = useTranslationFolder('food')
-  const { rootPath } = useRootPathname()
   const nFoodBeverage = 4
   const foodData: any[] = []
   for (let i = 1; i <= nFoodBeverage; i++) {
@@ -68,18 +73,9 @@ export default function FoodContent() {
         ))}
       </div>
 
-      <div className='flex flex-col text-success mt-24'>
-        <Link href={`${rootPath}/food/north`} locale={false}>
-          ▪ {tl.north}
-        </Link>
-
-        <Link href={`${rootPath}/food/south`} locale={false}>
-          ▪ {tl.south}
-        </Link>
-
-        <Link href={`${rootPath}/food/central`} locale={false}>
-          ▪ {tl.central}
-        </Link>
+      <div className='mt-24 flex items-center justify-between'>
+        <FoodNavigation />
+        <HomeNavigation />
       </div>
     </div>
   )

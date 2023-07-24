@@ -4,7 +4,7 @@ import { useRootPathname } from '@/hook/usePath'
 import Image from 'next/image'
 import Link from 'next/link'
 
-export default function SampleContent({ tl }: { tl: any }) {
+export function SampleContent({ tl }: { tl: any }) {
   const { rootPath } = useRootPathname()
   return (
     <>

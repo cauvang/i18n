@@ -1,0 +1,4 @@
+.has-overlay {
+  min-height: 100vh;
+  overflow-y: hidden;
+}

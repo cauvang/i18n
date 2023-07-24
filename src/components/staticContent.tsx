@@ -1,9 +1,9 @@
 'use client'
 
 import { useTranslationFolder } from '@/hook/useStaticContent'
-import SampleContent from './sampleContent'
+import { SampleContent } from './sampleContent'
 
-export default function StaticContent() {
+export function StaticContent() {
   const { translation: tl } = useTranslationFolder('home')
 
   return (

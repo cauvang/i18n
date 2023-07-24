@@ -9,7 +9,7 @@ const activeButton = (isActive: boolean) =>
     ? 'bg-blue-500 hover:bg-blue-700 text-white border border-blue-700'
     : ' hover:bg-offWhite text-grey'
 
-export default function DropDownList() {
+export function DropDownList() {
   const router = useRouter()
 
   return (

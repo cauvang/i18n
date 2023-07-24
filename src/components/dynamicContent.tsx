@@ -1,7 +1,7 @@
 import { useDynamicContent } from '@/hook/useDynamicContent'
-import SampleContent from './sampleContent'
+import { SampleContent } from './sampleContent'
 
-export default function DynamicContent() {
+export function DynamicContent() {
   const { data: tl, isLoading } = useDynamicContent()
 
   return (
