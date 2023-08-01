@@ -7,9 +7,9 @@ interface Props {
 
 export const Overlay = ({ children, className = '' }: Props) => {
   useEffect(() => {
-    document.querySelector('body')?.setAttribute('class', 'has-overlay')
+    document.querySelector('html')?.setAttribute('class', 'has-overlay')
     return () => {
-      document.querySelector('body')?.setAttribute('class', '')
+      document.querySelector('html')?.setAttribute('class', '')
     }
   }, [])
 

@@ -16,12 +16,13 @@ export default function CentralPlacesContent() {
     <div className='p-7'>
       <p className='text-7xl text-primary text-center p-4'>{tl.central}</p>
       <div className='mt-8 gap-12 grid grid-cols-2 text-secondary'>
-        {centralPlaceData.map(([name, detail]) => (
+        {centralPlaceData.map(([name, detail], index) => (
           <PlaceDetail
             key={name}
             imageSrc={name}
             name={tl[name]}
             detail={tl[detail]}
+            index={index}
           />
         ))}
       </div>

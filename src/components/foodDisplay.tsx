@@ -1,33 +1,28 @@
 import Image from 'next/image'
-import { Overlay } from './overlay'
 import { useTranslationFolder } from '@/hook/useStaticContent'
 import { FoodDetail } from '@/app/[lang]/food/pageContent'
+import { FormOverlay } from './formOverlay'
 
 interface DisplayFoodProps {
   isOpen: boolean
   onClose: () => void
   data: any[]
   link?: string
+  index: number
 }
 
-export function DisplayFood({ link, data, isOpen, onClose }: DisplayFoodProps) {
+export function DisplayFood({
+  link,
+  data,
+  isOpen,
+  onClose,
+  index,
+}: DisplayFoodProps) {
   const { translation: tl } = useTranslationFolder('food')
 
-  if (!isOpen) return <></>
-
   return (
-    <Overlay>
-      <div className='bg-white gap-12 w-1/2 h-full pt-6 pb-20 px-14 absolute right-0 rounded-tl-4xl overflow-y-auto'>
-        <div className='relative  w-6 h-6 mb-6 float-right'>
-          <Image
-            src='/images/closeIcon.svg'
-            alt='close'
-            fill
-            onClick={onClose}
-            className='absolute top-0 right-0  cursor-pointer'
-          />
-        </div>
-
+    <FormOverlay isOpen={isOpen} onClose={onClose}>
+      <div className='  gap-12 h-full pt-6 pb-20 px-14 absolute  overflow-y-auto'>
         <a href={link} target='_blank' rel='noopener noreferrer'>
           {link}
         </a>
@@ -44,6 +39,6 @@ export function DisplayFood({ link, data, isOpen, onClose }: DisplayFoodProps) {
           ))}
         </div>
       </div>
-    </Overlay>
+    </FormOverlay>
   )
 }

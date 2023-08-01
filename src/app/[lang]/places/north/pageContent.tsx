@@ -3,14 +3,27 @@
 import { useTranslationFolder } from '@/hook/useStaticContent'
 import { PlaceNavigation, HomeNavigation, DisplayFood } from '@/components'
 import Image from 'next/image'
-import { IDetailProps } from '../../food/pageContent'
 import { useState } from 'react'
 
-export const PlaceDetail = ({ link, imageSrc, name, detail }: IDetailProps) => {
+export interface IPlaceDetailProps {
+  imageSrc: string
+  name: string
+  detail: string
+  link?: string
+  index: number
+}
+
+export const PlaceDetail = ({
+  link,
+  imageSrc,
+  name,
+  detail,
+  index,
+}: IPlaceDetailProps) => {
   const [showFood, setShowFood] = useState(false)
 
-  const iStart = imageSrc === 'northPlace1' ? 1 : 8
-  const iEnd = imageSrc === 'northPlace1' ? 7 : 10
+  const iStart = index === 0 ? 1 : index === 1 ? 8 : index === 2 ? 12 : 14
+  const iEnd = index === 0 ? 7 : index === 1 ? 11 : index === 2 ? 13 : 14
   const data: any[] = []
   for (let i = iStart; i <= iEnd; i++) {
     data.push([`northFood${i}`, `northFood${i}Explain`])
@@ -32,6 +45,7 @@ export const PlaceDetail = ({ link, imageSrc, name, detail }: IDetailProps) => {
       </span>
 
       <DisplayFood
+        index={index}
         link={link}
         data={data}
         isOpen={showFood}
@@ -46,6 +60,7 @@ export const northPlaceData: any[] = []
 for (let i = 1; i <= nNorthPlace; i++) {
   northPlaceData.push([`northPlace${i}`, `northPlace${i}Explain`])
 }
+
 export default function NorthernPlacesContent() {
   const { translation: tl } = useTranslationFolder('places')
 
@@ -53,12 +68,13 @@ export default function NorthernPlacesContent() {
     <div className='p-7'>
       <p className='text-7xl text-primary text-center p-4'>{tl.north}</p>
       <div className='mt-8 gap-12 grid grid-cols-2 text-secondary'>
-        {northPlaceData.map(([name, detail]) => (
+        {northPlaceData.map(([name, detail], index) => (
           <PlaceDetail
             key={name}
             imageSrc={name}
             name={tl[name]}
             detail={tl[detail]}
+            index={index}
             link={name === 'northPlace1' ? tl.HaNoiLink : ''}
           />
         ))}

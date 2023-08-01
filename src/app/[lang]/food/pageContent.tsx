@@ -4,19 +4,20 @@ import { FoodNavigation, HomeNavigation } from '@/components'
 import { useTranslationFolder } from '@/hook/useStaticContent'
 import Image from 'next/image'
 
-export interface IDetailProps {
+interface IFoodDetailProps {
   imageSrc: string
   name: string
   detail: string
   link?: string
   className?: string
+  index?: number
 }
 export const FoodDetail = ({
   imageSrc,
   name,
   detail,
   className,
-}: IDetailProps) => (
+}: IFoodDetailProps) => (
   <span>
     <p className={`text-4xl text-secondaryUK h-24 ${className}`}> ▪ {name}</p>
     <div className='relative w-full h-96 my-4'>
@@ -25,7 +26,7 @@ export const FoodDetail = ({
     {detail}
   </span>
 )
-const BeverageDetail = ({ imageSrc, name, detail }: IDetailProps) => (
+const BeverageDetail = ({ imageSrc, name, detail }: IFoodDetailProps) => (
   <span className='text-secondary'>
     <p className='text-4xl text-secondaryUK  h-24'> ▪ {name}</p>
     <Image

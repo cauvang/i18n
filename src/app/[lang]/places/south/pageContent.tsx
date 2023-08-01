@@ -9,6 +9,7 @@ export const southPlaceData: any[] = []
 for (let i = 1; i <= nSouthPlace; i++) {
   southPlaceData.push([`southPlace${i}`, `southPlace${i}Explain`])
 }
+
 export default function SouthPlacesContent() {
   const { translation: tl } = useTranslationFolder('places')
 
@@ -16,12 +17,14 @@ export default function SouthPlacesContent() {
     <div className='p-7'>
       <p className='text-7xl text-primary text-center p-4'>{tl.south}</p>
       <div className='mt-8 gap-12 grid grid-cols-2 text-secondary'>
-        {southPlaceData.map(([name, detail]) => (
+        {southPlaceData.map(([name, detail], index) => (
           <PlaceDetail
             key={name}
             imageSrc={name}
             name={tl[name]}
             detail={tl[detail]}
+            index={index}
+            link={name === 'southPlace1' ? tl.HCMLink : ''}
           />
         ))}
       </div>

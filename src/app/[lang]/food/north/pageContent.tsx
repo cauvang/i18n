@@ -6,7 +6,7 @@ import { FoodNavigation, HomeNavigation } from '@/components'
 
 export default function NorthernFoodContent() {
   const { translation: tl } = useTranslationFolder('food')
-  const nFood = 10
+  const nFood = 13
   const data: any[] = []
   for (let i = 1; i <= nFood; i++) {
     data.push([`northFood${i}`, `northFood${i}Explain`])
