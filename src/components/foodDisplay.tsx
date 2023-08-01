@@ -8,16 +8,9 @@ interface DisplayFoodProps {
   onClose: () => void
   data: any[]
   link?: string
-  index: number
 }
 
-export function DisplayFood({
-  link,
-  data,
-  isOpen,
-  onClose,
-  index,
-}: DisplayFoodProps) {
+export function DisplayFood({ link, data, isOpen, onClose }: DisplayFoodProps) {
   const { translation: tl } = useTranslationFolder('food')
 
   return (

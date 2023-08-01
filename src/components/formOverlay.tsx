@@ -48,7 +48,7 @@ export const FormOverlay = ({
                   <div
                     className={`flex h-full flex-col bg-offWhite shadow-xl ${className}`}
                   >
-                    <div className='w-full h-6 pr-[30px]  pt-4 '>
+                    <div className='w-full h-12 pr-[30px]  pt-4 '>
                       <div className='relative h-6 w-6 float-right'>
                         <Image
                           src='/images/closeIcon.svg'

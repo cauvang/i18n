@@ -9,6 +9,17 @@ export const centralPlaceData: any[] = []
 for (let i = 1; i <= nCentralPlace; i++) {
   centralPlaceData.push([`centralPlace${i}`, `centralPlace${i}Explain`])
 }
+
+function getFoodData(index: number) {
+  const iStart = index === 0 ? 1 : index === 1 ? 8 : index === 2 ? 12 : 14
+  const iEnd = index === 0 ? 7 : index === 1 ? 11 : index === 2 ? 13 : 14
+  const data: any[] = []
+  for (let i = iStart; i <= iEnd; i++) {
+    data.push([`centralFood${i}`, `centralFood${i}Explain`])
+  }
+  return data
+}
+
 export default function CentralPlacesContent() {
   const { translation: tl } = useTranslationFolder('places')
 
@@ -23,6 +34,7 @@ export default function CentralPlacesContent() {
             name={tl[name]}
             detail={tl[detail]}
             index={index}
+            data={getFoodData(index)}
           />
         ))}
       </div>

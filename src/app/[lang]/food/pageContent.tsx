@@ -21,7 +21,12 @@ export const FoodDetail = ({
   <span>
     <p className={`text-4xl text-secondaryUK h-24 ${className}`}> ▪ {name}</p>
     <div className='relative w-full h-96 my-4'>
-      <Image src={`/images/food/${imageSrc}.jpeg`} alt='' fill />
+      <Image
+        src={`/images/food/${imageSrc}.jpeg`}
+        alt=''
+        fill
+        className='object-cover'
+      />
     </div>
     {detail}
   </span>
@@ -30,7 +35,7 @@ const BeverageDetail = ({ imageSrc, name, detail }: IFoodDetailProps) => (
   <span className='text-secondary'>
     <p className='text-4xl text-secondaryUK  h-24'> ▪ {name}</p>
     <Image
-      className='my-4'
+      className='my-4 object-cover'
       src={`/images/food/${imageSrc}.jpeg`}
       alt=''
       width={400}

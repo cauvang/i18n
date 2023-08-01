@@ -10,6 +10,16 @@ for (let i = 1; i <= nSouthPlace; i++) {
   southPlaceData.push([`southPlace${i}`, `southPlace${i}Explain`])
 }
 
+function getFoodData(index: number) {
+  const iStart = index === 0 ? 1 : index === 1 ? 7 : index === 2 ? 12 : -1
+  const iEnd = index === 0 ? 6 : index === 1 ? 11 : index === 2 ? 15 : -2
+  const data: any[] = []
+  for (let i = iStart; i <= iEnd; i++) {
+    data.push([`southFood${i}`, `southFood${i}Explain`])
+  }
+  return data
+}
+
 export default function SouthPlacesContent() {
   const { translation: tl } = useTranslationFolder('places')
 
@@ -25,6 +35,7 @@ export default function SouthPlacesContent() {
             detail={tl[detail]}
             index={index}
             link={name === 'southPlace1' ? tl.HCMLink : ''}
+            data={getFoodData(index)}
           />
         ))}
       </div>
