@@ -5,7 +5,7 @@ import { usePathname } from 'next/navigation'
 import { activeLink } from './foodNavigation'
 
 export function PlaceNavigation() {
-  const { rootPath, isHavingLocale } = useRootPathname()
+  const { rootPath } = useRootPathname()
   const pathName = usePathname()
   const { translation: tl } = useTranslationFolder('places')
 
@@ -14,34 +14,25 @@ export function PlaceNavigation() {
       <Link
         href={`${rootPath}/places/north`}
         locale={false}
-        className={activeLink(
-          isHavingLocale ? rootPath : `${rootPath}/places/north`,
-          pathName
-        )}
+        className={activeLink(`${rootPath}/places/north`, pathName)}
       >
         ▪ {tl.north}
       </Link>
 
       <Link
-        href={`${rootPath}/places/south`}
+        href={`${rootPath}/places/central`}
         locale={false}
-        className={activeLink(
-          isHavingLocale ? rootPath : `${rootPath}/places/south`,
-          pathName
-        )}
+        className={activeLink(`${rootPath}/places/central`, pathName)}
       >
-        ▪ {tl.south}
+        ▪ {tl.central}
       </Link>
 
       <Link
-        href={`${rootPath}/places/central`}
+        href={`${rootPath}/places/south`}
         locale={false}
-        className={activeLink(
-          isHavingLocale ? rootPath : `${rootPath}/places/central`,
-          pathName
-        )}
+        className={activeLink(`${rootPath}/places/south`, pathName)}
       >
-        ▪ {tl.central}
+        ▪ {tl.south}
       </Link>
     </div>
   )

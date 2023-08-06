@@ -19,7 +19,7 @@ export const FoodDetail = ({
   className,
 }: IFoodDetailProps) => (
   <span>
-    <p className={`text-4xl text-secondaryUK h-24 ${className}`}> ▪ {name}</p>
+    <p className={`text-4xl text-secondaryUK h-auto ${className}`}> ▪ {name}</p>
     <div className='relative w-full h-96 my-4'>
       <Image
         src={`/images/food/${imageSrc}.jpeg`}

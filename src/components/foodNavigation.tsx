@@ -8,7 +8,7 @@ export const activeLink = (url: string, pathname: string | null) => {
 }
 
 export function FoodNavigation() {
-  const { rootPath, isHavingLocale } = useRootPathname()
+  const { rootPath } = useRootPathname()
   const pathName = usePathname()
   const { translation: tl } = useTranslationFolder('food')
 
@@ -17,34 +17,25 @@ export function FoodNavigation() {
       <Link
         href={`${rootPath}/food/north`}
         locale={false}
-        className={activeLink(
-          isHavingLocale ? rootPath : `${rootPath}/food/north`,
-          pathName
-        )}
+        className={activeLink(`${rootPath}/food/north`, pathName)}
       >
         ▪ {tl.north}
       </Link>
 
       <Link
-        href={`${rootPath}/food/south`}
+        href={`${rootPath}/food/central`}
         locale={false}
-        className={activeLink(
-          isHavingLocale ? rootPath : `${rootPath}/food/south`,
-          pathName
-        )}
+        className={activeLink(`${rootPath}/food/central`, pathName)}
       >
-        ▪ {tl.south}
+        ▪ {tl.central}
       </Link>
 
       <Link
-        href={`${rootPath}/food/central`}
+        href={`${rootPath}/food/south`}
         locale={false}
-        className={activeLink(
-          isHavingLocale ? rootPath : `${rootPath}/food/central`,
-          pathName
-        )}
+        className={activeLink(`${rootPath}/food/south`, pathName)}
       >
-        ▪ {tl.central}
+        ▪ {tl.south}
       </Link>
     </div>
   )

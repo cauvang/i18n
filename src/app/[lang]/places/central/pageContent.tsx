@@ -11,8 +11,30 @@ for (let i = 1; i <= nCentralPlace; i++) {
 }
 
 function getFoodData(index: number) {
-  const iStart = index === 0 ? 1 : index === 1 ? 8 : index === 2 ? 12 : 14
-  const iEnd = index === 0 ? 7 : index === 1 ? 11 : index === 2 ? 13 : 14
+  const iStart =
+    index === 0
+      ? 1
+      : index === 1
+      ? 3
+      : index === 2
+      ? 6
+      : index === 3
+      ? 8
+      : index === 4
+      ? 9
+      : -1
+  const iEnd =
+    index === 0
+      ? 2
+      : index === 1
+      ? 5
+      : index === 2
+      ? 7
+      : index === 3
+      ? 8
+      : index === 4
+      ? 12
+      : -2
   const data: any[] = []
   for (let i = iStart; i <= iEnd; i++) {
     data.push([`centralFood${i}`, `centralFood${i}Explain`])
@@ -35,6 +57,7 @@ export default function CentralPlacesContent() {
             detail={tl[detail]}
             index={index}
             data={getFoodData(index)}
+            link={name === 'centralPlace5' ? tl.HueLink : ''}
           />
         ))}
       </div>
