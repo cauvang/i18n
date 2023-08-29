@@ -16,6 +16,27 @@ const nextConfig = withPWA({
   // output: 'export',
   trailingSlash: false,
   images: { unoptimized: true },
+  async headers() {
+    return [
+      {
+        source: '/:path*',
+        headers: [
+          {
+            key: 'Cache-Control',
+            value: 's-maxage=60, stale-while-revalidate=59',
+          },
+          {
+            key: 'CDN-Cache-Control',
+            value: 's-maxage=60, max-age=60',
+          },
+          {
+            key: 'Vercel-CDN-Cache-Control',
+            value: 's-maxage=60, max-age=60',
+          },
+        ],
+      },
+    ]
+  },
 })
 
 module.exports = nextConfig
